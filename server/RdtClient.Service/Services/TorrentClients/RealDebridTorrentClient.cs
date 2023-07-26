@@ -247,14 +247,14 @@ public class RealDebridTorrentClient : ITorrentClient
                 throw new Exception($"Resource not found");
             }
 
-            if (!String.IsNullOrWhiteSpace(rdTorrent.Filename))
-            {
-                torrent.RdName = rdTorrent.Filename;
-            }
-
             if (!String.IsNullOrWhiteSpace(rdTorrent.OriginalFilename))
             {
                 torrent.RdName = rdTorrent.OriginalFilename;
+            }
+
+            if (!String.IsNullOrWhiteSpace(rdTorrent.Filename))
+            {
+                torrent.RdName = rdTorrent.Filename;
             }
 
             if (rdTorrent.Bytes > 0)
