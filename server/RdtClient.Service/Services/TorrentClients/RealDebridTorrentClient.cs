@@ -257,6 +257,8 @@ public class RealDebridTorrentClient : ITorrentClient
                 torrent.RdName = rdTorrent.Filename;
             }
 
+            torrent.RdName = torrent.RdName.Replace(" ", "_");
+
             if (rdTorrent.Bytes > 0)
             {
                 torrent.RdSize = rdTorrent.Bytes;
